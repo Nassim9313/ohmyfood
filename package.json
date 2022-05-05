@@ -1,0 +1,22 @@
+{
+  "name": "p3_aboudou_nassim",
+  "version": "1.0.0",
+  "description": "Projet 3 OpenClassroom ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nassim9313/ohmyfood.git"
+  },
+  "author": "Nassim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nassim9313/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Nassim9313/ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
+}
