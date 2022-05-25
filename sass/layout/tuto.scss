@@ -2,22 +2,45 @@
 @use"../utils/zoom.scss";
 
 
-.tuto{
+.tuto {
+    counter-reset: steps;
     & ol{
         display: flex;
-        @media (max-width: 767px){
+        gap: 2rem;
+        @media (max-width: 1000px) {
             flex-direction: column;
         }
     }
     & li{
-        background-color: #f6f6f6;
-        padding: 1rem 2rem;
-        border: 1px solid red;
-        flex-grow: 1;
-        border-radius: 1rem;
-        @include box-shadow.base-shadow;
+        position: relative;
+        &::before {
+        content: counter(steps);
+        counter-increment: steps;
+        color: white;
+        background-color: #9356dc;
+        width: 2rem;
+        height: 2rem;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 1rem;
+        left: -1rem;
+        }
+
         &:hover{
             @include zoom.transform-zoom;
         }
+        
+        list-style-type: none;
+        background-color: #f6f6f6;
+        padding: 1rem 2rem;
+        flex-grow: 1;
+        border-radius: 1rem;
+        @include box-shadow.base-shadow;
+        
+    & i.fas {
+        margin-right: 1rem;
+    } 
+        }
     }
-}

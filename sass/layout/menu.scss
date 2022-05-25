@@ -1,0 +1,40 @@
+.menus {
+    background-color: #f6f6f6;
+
+    h2{
+        margin-bottom: 1rem;
+    }
+
+    .menus_cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        @media (max-width: 1000px){
+         grid-template-columns: repeat(1, 1fr);
+        }
+
+    }
+
+    .card{
+        &_image{
+            height: 15rem;
+            border-radius: 3rem ;
+            background-size: cover;  
+        }
+        
+        &_image-1{
+            background-image: url(../P3_Aboudou_Nassim/images/resto1.jpg);
+        }
+        &_image-2{
+            background-image: url(../P3_Aboudou_Nassim/images/resto2.jpg);
+        }
+        &_image-3{
+            background-image: url(../P3_Aboudou_Nassim/images/resto3.jpg);
+        }
+        &_image-4{
+            background-image: url(../P3_Aboudou_Nassim/images/resto4.jpg);
+        }
+        
+    }
+
+}
