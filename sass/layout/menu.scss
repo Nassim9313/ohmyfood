@@ -43,18 +43,16 @@
             border-radius: 1rem 1rem 0 0 ;
             background-size: cover;  
         }
-        &_image-1{
-            background-image: url(../P3_Aboudou_Nassim/images/resto1.jpg);
+
+        .card_image img {
+            height: 100%;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+    object-position: -1px -87px;
         }
-        &_image-2{
-            background-image: url(../P3_Aboudou_Nassim/images/resto2.jpg);
-        }
-        &_image-3{
-            background-image: url(../P3_Aboudou_Nassim/images/resto3.jpg);
-        }
-        &_image-4{
-            background-image: url(../P3_Aboudou_Nassim/images/resto4.jpg);
-        }
+        
+        
         &_description{
             background-color: white;
             border-radius: 0 0 1rem 1rem;
