@@ -1,4 +1,4 @@
-@use"../utils/box-shadow.scss";
+@use"../utils/mixin.scss";
 
 .explorer{
     text-align : center;   
@@ -10,20 +10,41 @@
     font-size: 1rem;
 }
 & button{
-    color: white;
-    font-weight: bold ;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 2rem;
-    padding: 1rem 2rem;
-    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-    transition: transform 200ms;
-    margin-top: 1rem;
-    @include box-shadow.base-shadow;
-    
+    @include mixin.base-button;   
 }
-& button:hover{
-    transform: scal e(1.02);
+}
+
+.loader{
+    $animation-duration: 1s;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background-color: white;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
     opacity: 0.9;
+    animation: disappear 200ms $animation-duration forwards;
+    &::after {
+      content: "";
+      height: 100px;
+      width:100px;
+      border: 5px solid transparent;
+      border-top: 5px solid #9356dc;
+      border-radius: 50%;
+      animation: spin $animation-duration infinite linear;
+    }
 }
+
+@keyframes disappear {
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+    
 }

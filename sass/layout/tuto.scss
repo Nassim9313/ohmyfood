@@ -1,5 +1,5 @@
-@use "../utils/box-shadow.scss";
-@use"../utils/zoom.scss";
+@use "../utils/mixin.scss";
+
 
 
 .tuto {
@@ -29,7 +29,7 @@
         }
 
         &:hover{
-            @include zoom.transform-zoom;
+            @include mixin.transform-zoom;
         }
         
         list-style-type: none;
@@ -37,7 +37,7 @@
         padding: 1rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
-        @include box-shadow.base-shadow;
+        @include mixin.base-shadow;
         
     & i.fas {
         margin-right: 1rem;
